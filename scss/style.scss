@@ -144,6 +144,7 @@ p{
                 background: url(assets/img/about.svg);
             }
         }
+        
         &.participation h3{
             &:before{
                 background: url(assets/img/participation.svg);
@@ -426,7 +427,9 @@ div[role="article"]{
         display: grid;
         grid-template-columns: 50% 50%;
         column-gap: 30px;
+        
         div[role="article"]{
+            position: relative;
             h3:before{
                 margin-left: 0;
             }
@@ -445,7 +448,21 @@ div[role="article"]{
                     margin-left: auto;
                     background: url(assets/img/requirements-reverse.svg);
                 }
+                &:after{
+                    content: none;
+                }
                 
+            }
+            
+            &:after{
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height:45px;
+                background: url(assets/img/animation.gif);
+                position: absolute;
+                bottom: 0;
+                right: -30px;
             }
         }
         footer{

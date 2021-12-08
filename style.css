@@ -313,20 +313,33 @@ div[role="article"] {
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 30px; }
-    .main div[role="article"] h3:before {
-      margin-left: 0; }
-    .main div[role="article"]#zen-requirements {
-      grid-column: 1/ span 1;
-      grid-row: 1/span 3;
-      background: none; }
-      .main div[role="article"]#zen-requirements h3, .main div[role="article"]#zen-requirements p {
-        text-align: right; }
-      .main div[role="article"]#zen-requirements p[role="contentinfo"] {
-        text-align: center; }
-      .main div[role="article"]#zen-requirements h3:before {
-        margin-right: 0;
-        margin-left: auto;
-        background: url(assets/img/requirements-reverse.svg); }
+    .main div[role="article"] {
+      position: relative; }
+      .main div[role="article"] h3:before {
+        margin-left: 0; }
+      .main div[role="article"]#zen-requirements {
+        grid-column: 1/ span 1;
+        grid-row: 1/span 3;
+        background: none; }
+        .main div[role="article"]#zen-requirements h3, .main div[role="article"]#zen-requirements p {
+          text-align: right; }
+        .main div[role="article"]#zen-requirements p[role="contentinfo"] {
+          text-align: center; }
+        .main div[role="article"]#zen-requirements h3:before {
+          margin-right: 0;
+          margin-left: auto;
+          background: url(assets/img/requirements-reverse.svg); }
+        .main div[role="article"]#zen-requirements:after {
+          content: none; }
+      .main div[role="article"]:after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 45px;
+        background: url(assets/img/animation.gif);
+        position: absolute;
+        bottom: 0;
+        right: -30px; }
     .main footer {
       grid-column: 1/span 2; } }
 @media screen and (max-width: 444px) {
